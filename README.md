@@ -9,7 +9,11 @@ Technologies Used
 - CSS  
 - JavaScript  
 - Fetch API
-   
+
+Screenshot
+
+![Movie Searching App Screenshot](./search.png)
+
  Features
  
 - Search for movies and TV shows
