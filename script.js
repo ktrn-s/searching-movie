@@ -11,6 +11,27 @@ const api = {
 
 const input = document.querySelector("#search");
 const results = document.querySelector("#results");
+const bnt = document.querySelector("#btn");
+
+function renderMovies(movieList) {
+    results.innerHTML = "";
+
+    movieList.forEach(movie => {
+        const movieDiv = document.createElement("div");
+        movieDiv.classList.add("movie");
+
+        movieDiv.innerHTML = `
+            <img src="${movie.poster}" alt="${movie.title}">
+            <p><a href="${movie.imdb}" target="_blank">${movie.title} ${movie.year}</a></p>
+        `;
+
+        results.appendChild(movieDiv);
+
+        gsap.from(movieDiv, { duration: 0.7, opacity: 0, y: 30, ease: "power2.out" });
+    });
+}
+
+renderMovies(defaultMovies);
 
 input.addEventListener("keypress", function(e) {
     if (e.keyCode === 13) {
@@ -25,7 +46,7 @@ function searchMovies(title) {
 
     movies.forEach(movie => {
         const name = movie.querySelector("p").textContent.toLowerCase();
-        if (name.includes(title.toLowerCase()) || title === "") {
+        if (name.includes(title) || title === "") {
             movie.style.display = "block";
             foundLocal = true;
         } else {
@@ -41,9 +62,8 @@ function searchMovies(title) {
 async function getMovieFromAPI(title) {
     const res = await fetch(`${api.endpoint}?apikey=${api.key}&t=${title}`);
     const data = await res.json();
-    
+
     results.innerHTML = "";
-        //console.log(data);
 
     displayMovie(data);
 }
@@ -55,21 +75,21 @@ function displayMovie(data) {
 
         movieDiv.innerHTML = `
             <img src="${data.Poster !== "N/A" ? data.Poster : 'placeholder.jpg'}" alt="${data.Title}">
-            <p>${data.Title} (${data.Year})</p>
-            <a href="https://www.imdb.com/title/${data.imdbID}" target="_blank">View on IMDb</a>
+            <p><a href="https://www.imdb.com/title/${data.imdbID}" target="_blank">${data.Title} (${data.Year})</a></p>
         `;
 
         results.appendChild(movieDiv);
 
         gsap.from(movieDiv, { duration: 0.7, opacity: 0, y: 30, ease: "power2.out" });
-
     } else {
         results.innerHTML = "<p> No results found. Try another title!</p>";
     }
 }
 
-const bnt = document.querySelector("#btn");
 bnt.addEventListener("click", reloadAll);
-function reloadAll(){
-    location.reload();
+function reloadAll() {
+    renderMovies(defaultMovies);
+    input.value = "";
 }
+
+

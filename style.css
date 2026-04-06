@@ -1,22 +1,13 @@
-/* body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-    color: rgb(243, 236, 236);
-    text-align: center;
-    padding: 2rem;
-} */
+
 body {
     font-family: 'Poppins', sans-serif;
     background: radial-gradient(circle at top, #1a1a1a, #000);
     background-color: #121212;
-    /* background: linear-gradient(135deg, #8B3E3E, #AA5656, #5C1F1F);
-    background-color: #8B3E3E; */
     color: rgb(243, 236, 236);
     text-align: center;
     padding: 2rem;
     height: 100%;
     margin: 0;
-    padding: 0;
 }
 .heading {
     margin-top: 20px;
@@ -27,18 +18,17 @@ body {
     max-width: 600px;
     margin: 20px auto;
     padding: 0.8rem 1rem;
-    /* background: rgba(255, 255, 255, 0.1);  subtle card look */
-    backdrop-filter: blur(10px);           /* soft blur for elegance */
+    backdrop-filter: blur(10px);           
     border-radius: 12px;
     color: #e9e5e1;
     text-align: center;
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     line-height: 1.6;
     box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
 .highlight {
-    color: #ffd369; /* or any color you want */
-    font-weight: 600; /* optional: make it stand out a bit */
+    color: #ffd369; 
+    font-weight: 600; 
 }
 #search {
     padding: 0.9rem 1rem;
@@ -55,13 +45,11 @@ body {
     align-items: center;
     gap: 10px;
     margin-bottom: 2rem;
-
 }
 #btn {
-    /* background-color: #8B3E3E; */
-    background-color: #676363;
+    background-color: #f5c518;
     border: none;
-    color: #ffffff;
+    color: #000;
     border-radius: 12px;
     cursor: pointer;
     padding: 0.7rem;
@@ -69,8 +57,8 @@ body {
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 #btn:hover {
-    background-color: rgba(245, 197, 24, 0.6);
-    box-shadow: 0 0 20px rgba(245, 197, 24, 0.6);
+    background-color: rgba(245, 197, 24, 0.845);
+    box-shadow: 0 0 20px rgba(245, 197, 24, 0.734);
     transform: translateY(-2px);
 }
 #btn-img {
@@ -81,13 +69,12 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 1.5rem;
 }
 .movie {
     display: flex;
     flex-direction: column;
     align-items: center; 
-    margin: 10px;
-    padding: 20px;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     border-radius: 16px;
@@ -100,6 +87,8 @@ body {
     box-shadow: 0 8px 20px rgba(69, 63, 63, 0.5);
 }
 .movie img {
+    width: 200px;
+    height: 300px;
     border-radius: 15px;
     padding: 10px;
     object-fit: cover;
@@ -107,6 +96,8 @@ body {
 a {
     color: #f5c518;
     text-decoration: none;
+    transition: color 0.3s ease;
+
 }
 a:hover {
     color: rgba(245, 197, 24, 0.6);
@@ -138,7 +129,7 @@ a:hover {
     .movie {
         width: 90%; 
     }
-    img { 
+    .movie img { 
         width: 100%; 
         height: auto; 
     }
