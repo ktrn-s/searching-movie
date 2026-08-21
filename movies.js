@@ -119,7 +119,7 @@ const defaultMovies = [
     },
     {
         title: "Criminal Minds",
-        year: "(2005–2020)",
+        year: "(2005–present)",
         imdbID: "tt0452046",
         imdb: "https://www.imdb.com/title/tt0452046/"
     },
