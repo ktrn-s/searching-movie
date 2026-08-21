@@ -2,11 +2,9 @@
 body {
     font-family: 'Poppins', sans-serif;
     background: radial-gradient(circle at top, #1a1a1a, #000);
-    background-color: #121212;
     color: rgb(243, 236, 236);
     text-align: center;
     padding: 2rem;
-    height: 100%;
     margin: 0;
 }
 .heading {
@@ -104,7 +102,7 @@ a:hover {
     text-decoration: underline;
 }
 
-@media all and (max-width:800px) {
+@media all and (max-width: 800px) {
     body {
         color: #e0daba;
     }
