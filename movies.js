@@ -61,13 +61,13 @@ const defaultMovies = [
   },
   {
     title: "Fargo",
-    year: "(2014–present)",
+    year: "(2014–2024)",
     poster: "https://m.media-amazon.com/images/M/MV5BN2NiMGE5M2UtNWNlNC00N2Y4LTkwOWUtMDlkMzEwNTcyOTcyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_FMjpg_UX1000_.jpg",
     imdb: "https://www.imdb.com/title/tt2802850/"
   },
   {
     title: "Succession",
-    year: "(2018–present)",
+    year: "(2018–2023",
     poster: "https://m.media-amazon.com/images/M/MV5BZTY0YjU0NTUtMGRmNS00NDMyLWI2MzYtNjM2MmM1M2FkMjkyXkEyXkFqcGdeQXVyNjY1MTg4Mzc@._V1_FMjpg_UX1000_.jpg",
     imdb: "https://www.imdb.com/title/tt7660850/?pf_rd_m=A2FGELUUNOQJNL&pf_rd_p=12230b0e-0e00-43ed-9e59-8d5353703cce&pf_rd_r=YDRR8RP0W5J9WEEK0QYH&pf_rd_s=center-1&pf_rd_t=15506&pf_rd_i=toptv&ref_=chttvtp_tt_48"
   }
