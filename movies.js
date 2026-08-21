@@ -137,7 +137,7 @@ const defaultMovies = [
     },
     {
         title: "Fargo",
-        year: "(2014–p2024)",
+        year: "(2014–2024)",
         imdbID: "tt2802850",
         imdb: "https://www.imdb.com/title/tt2802850/"
     },
