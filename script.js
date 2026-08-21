@@ -13,22 +13,60 @@ const input = document.querySelector("#search");
 const results = document.querySelector("#results");
 const bnt = document.querySelector("#btn");
 
-function renderMovies(movieList) {
+// function renderMovies(movieList) {
+//     results.innerHTML = "";
+
+//     movieList.forEach(movie => {
+//         const movieDiv = document.createElement("div");
+//         movieDiv.classList.add("movie");
+
+//         movieDiv.innerHTML = `
+//             <img src="${movie.poster}" alt="${movie.title}">
+//             <p><a href="${movie.imdb}" target="_blank">${movie.title} ${movie.year}</a></p>
+//         `;
+
+//         results.appendChild(movieDiv);
+
+//         gsap.from(movieDiv, { duration: 0.7, opacity: 0, y: 30, ease: "power2.out" });
+//     });
+// }
+
+async function renderMovies(movieList) {
     results.innerHTML = "";
 
-    movieList.forEach(movie => {
+    for (const movie of movieList) {
+
+        const res = await fetch(
+            `${api.endpoint}?apikey=${api.key}&i=${movie.imdbID}`
+        );
+
+        const data = await res.json();
+
         const movieDiv = document.createElement("div");
         movieDiv.classList.add("movie");
 
+        const poster = data.Poster !== "N/A"
+            ? data.Poster
+            : "placeholder.jpg";
+
         movieDiv.innerHTML = `
-            <img src="${movie.poster}" alt="${movie.title}">
-            <p><a href="${movie.imdb}" target="_blank">${movie.title} ${movie.year}</a></p>
+            <img src="${poster}" alt="${movie.title}">
+            <p>
+                <a href="${movie.imdb}" target="_blank">
+                    ${movie.title} ${movie.year}
+                </a>
+            </p>
         `;
 
         results.appendChild(movieDiv);
 
-        gsap.from(movieDiv, { duration: 0.7, opacity: 0, y: 30, ease: "power2.out" });
-    });
+        gsap.from(movieDiv, {
+            duration: 0.7,
+            opacity: 0,
+            y: 30,
+            ease: "power2.out"
+        });
+    }
 }
 
 renderMovies(defaultMovies);
