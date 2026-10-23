@@ -38,5 +38,3 @@ Through this project, I strengthened my understanding of:
 - Handling user input
 - Working with APIs
 - Asynchronous JavaScript
-- Updating the UI dynamically
-
