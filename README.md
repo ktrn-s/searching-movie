@@ -36,3 +36,10 @@ This allows users to quickly search and explore movies and TV shows in one place
 One of the main challenges in this project was working with asynchronous data using the Fetch API and dynamically updating the DOM.  
 Through this project, I strengthened my understanding of:
 - Handling user input
+- Working with APIs
+- Asynchronous JavaScript
+- Updating the UI dynamically
+
+
+How to Run the Project
+No additional setup is required.
