@@ -40,5 +40,3 @@ Through this project, I strengthened my understanding of:
 - Asynchronous JavaScript
 - Updating the UI dynamically
 
-How to Run the Project
-No additional setup is required.
