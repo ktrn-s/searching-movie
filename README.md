@@ -37,7 +37,7 @@ One of the main challenges in this project was working with asynchronous data us
 Through this project, I strengthened my understanding of:
 - Handling user input
 - Working with APIs
-- Asynchronous JavaScript
+
 
 
 How to Run the Project
